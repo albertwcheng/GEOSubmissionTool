@@ -19,5 +19,6 @@ if [ ! -e $codeDir/$GPLNum.mapToFeatureNum ]; then
 else
 	echo "using $codeDir/$GPLNum.mapToFeatureNum"
 	joinu.py -1 .Row,.Col -2 .Row,.Col $codeDir/$GPLNum.mapToFeatureNum $inputMatrix > $tpfile
-	cuta.py -f".ID,.Status>>1-_1" $tpfile > $outputMatrix
+	#cuta.py -f".ID,.Status>>1-_1" $tpfile > $outputMatrix
+	cp $tpfile $outputMatrix
 fi
